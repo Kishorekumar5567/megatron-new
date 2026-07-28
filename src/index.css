@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "sans-serif";
+  --font-display: "Space Grotesk", "sans-serif";
+  
+  --color-primary-deep: #0B192C;
+  --color-primary-navy: #1A365D;
+  --color-accent-blue: #2563EB;
+  --color-accent-electric: #00E1FF;
+  --color-accent-cyan: #06B6D4;
+  --color-surface-light: #F0F9FF;
+  
+  --color-text-main: #0F172A;
+  --color-text-muted: #475569;
+  
+  --color-border-subtle: rgba(226, 232, 240, 0.8);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-white text-slate-800 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-slate-900;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md border-b border-slate-200/50;
+  }
+  
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-sm border border-slate-200 shadow-sm;
+  }
+  
+  .grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500;
+  }
+}
