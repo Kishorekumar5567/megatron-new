@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                     Tamil Nadu 621804
                   </p>
                   <a 
-                    href="https://maps.app.goo.gl/Degqs1okdnfvXh156" 
+                    href="https://maps.app.goo.gl/AVYBkNGCw1Li7phf7" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors bg-blue-50 px-3 py-1.5 rounded-md"
@@ -262,7 +262,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-200">
             <iframe
-              src="https://maps.google.com/maps?q=Kottai+vasal+Keelvithi,+Udayarpalayam,+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=11.1849619,79.2943338&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
