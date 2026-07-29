@@ -26,10 +26,10 @@ const About: React.FC = () => {
             
             <div className="space-y-6 text-lg text-slate-600">
               <p>
-                Megatron Tech Solutions was established in 2017 with the objective of providing reliable products and services in networking and IT solutions. We focus on understanding each customer's needs, budget, and resources so we can design practical, cost-effective solutions.
+                Established in 2014 in Udayarpalayam, Ariyalur District, Megatron Tech Solutions is dedicated to serving both residential and business customers. We focus on understanding each customer's needs, budget, and resources to design practical, cost-effective solutions.
               </p>
               <p>
-                From IT assets and networks to security and wireless infrastructure, we help businesses manage technology with confidence.
+                From IT assets and networks to security and wireless infrastructure, our focus remains on honest pricing, high-quality service, and absolute customer satisfaction. We help you manage your technology with complete confidence.
               </p>
             </div>
           </motion.div>

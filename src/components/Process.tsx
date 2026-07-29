@@ -5,23 +5,23 @@ const Process: React.FC = () => {
   const steps = [
     {
       step: '01',
-      title: 'Consultation',
-      description: 'We assess your IT needs and discuss tailored solutions.'
+      title: 'Contact',
+      description: 'Reach out to us to schedule an appointment or request an onsite visit.'
     },
     {
       step: '02',
-      title: 'Planning',
-      description: 'Our team designs a robust plan to implement your technology.'
+      title: 'Free Diagnosis',
+      description: 'We perform a thorough evaluation to identify the root cause at no charge.'
     },
     {
       step: '03',
-      title: 'Execution',
-      description: 'We seamlessly integrate systems with minimal downtime.'
+      title: 'Expert Repair & Service',
+      description: 'Our certified technicians implement the fix quickly and effectively.'
     },
     {
       step: '04',
-      title: 'Support',
-      description: 'Ongoing 24/7 technical assistance for complete peace of mind.'
+      title: 'Delivery & Support',
+      description: 'We deliver your fixed system with comprehensive after-service support.'
     }
   ];
 

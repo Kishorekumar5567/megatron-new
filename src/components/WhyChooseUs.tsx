@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
 const benefits = [
-  'Reliable systems',
-  'Responsive support',
-  'Practical solutions',
-  'Experienced professionals',
-  'Scalable infrastructure',
-  'Security-first approach',
-  'Clear communication',
-  'Long-term partnership'
+  'Fast turnaround (mostly < 24h)',
+  'Certified technicians',
+  'Affordable & transparent pricing',
+  'Doorstep / on-site service',
+  'Genuine spare parts',
+  'Service across Ariyalur district'
 ];
 
 const WhyChooseUs: React.FC = () => {
@@ -53,10 +51,10 @@ const WhyChooseUs: React.FC = () => {
             </h2>
             <div className="space-y-6 text-lg text-slate-600">
               <p>
-                Technology should be an enabler, not a bottleneck. We build our client relationships on a foundation of trust, technical excellence, and clear communication.
+                We believe in providing honest pricing, quality service, and complete customer satisfaction. Our fast and affordable technology services ensure your home or business runs smoothly without downtime.
               </p>
               <p>
-                When you partner with Megatron Tech Solutions, you're not just getting a vendor—you're getting an extension of your own team that takes proactive responsibility for your digital infrastructure.
+                When you partner with Megatron Tech Solutions, you're getting a team of certified technicians ready to deliver genuine spare parts and transparent service right at your doorstep anywhere in Ariyalur district.
               </p>
               <a
                 href="#contact"

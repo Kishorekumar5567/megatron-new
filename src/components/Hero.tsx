@@ -81,16 +81,16 @@ const Hero: React.FC = () => {
               variants={itemVars}
               className="text-6xl sm:text-7xl lg:text-[5.5rem] font-bold font-display leading-[1.05] tracking-tight mb-8 text-white"
             >
-              Technology <br className="hidden sm:block" />
-              that <br className="hidden sm:block" />
-              <span className="text-cyan-200">keeps its word.</span>
+              Your Trusted <br className="hidden sm:block" />
+              IT Partner in <br className="hidden sm:block" />
+              <span className="text-cyan-200">Ariyalur.</span>
             </motion.h1>
             
             <motion.p 
               variants={itemVars}
               className="text-lg sm:text-xl text-blue-100/80 mb-10 leading-relaxed max-w-xl text-balance"
             >
-              Megatron Tech Solutions is the IT infrastructure partner for businesses that need dependable systems, responsive support, and one less thing to worry about.
+              Providing fast and affordable technology services for homes and businesses. Highlights include laptop repairs, CCTV installation, antivirus solutions, and billing software.
             </motion.p>
             
             <motion.div 

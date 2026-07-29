@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-              Your dependable partner for IT infrastructure, networking solutions, and professional technology support.
+              Your trusted local IT partner for fast, affordable, and high-quality technology solutions for homes and businesses.
             </p>
           </div>
           
@@ -45,10 +45,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">Location</h4>
             <address className="not-italic text-sm text-slate-400 space-y-1">
-              <p>D.19, Industrial Estate Labour Colony</p>
-              <p>Guindy, Chennai - 32</p>
+              <p>Udayarpalayam,</p>
+              <p>Ariyalur District</p>
               <p className="mt-4 pt-4 border-t border-slate-800">
-                GST: <span className="text-slate-300 font-mono">33CNPPA4747J1ZT</span>
+                Operating since <span className="text-slate-300 font-mono">2014</span>
               </p>
             </address>
           </div>

@@ -5,52 +5,52 @@ import { Laptop, Printer, Camera, ShieldAlert, Database, Monitor, Wifi, Cpu, Fil
 const services = [
   {
     icon: Laptop,
-    title: 'Computer & Laptop Services',
+    title: 'Desktop & Laptop Sales & Service',
     description: 'Expert diagnostics, repair, and maintenance for workstations and laptops to ensure maximum productivity.'
   },
   {
     icon: Printer,
-    title: 'Printer Services',
+    title: 'Printer Sales & Service',
     description: 'Setup, troubleshooting, and repair for all types of business printers and multifunction devices.'
   },
   {
     icon: Camera,
-    title: 'CCTV Installation',
+    title: 'CCTV Camera Installation & Sales',
     description: 'Comprehensive security surveillance systems to monitor and protect your physical assets.'
   },
   {
     icon: ShieldAlert,
-    title: 'Antivirus Solutions',
+    title: 'Antivirus & Cybersecurity',
     description: 'Robust endpoint protection and stateful security to defend your network against modern digital threats.'
   },
   {
     icon: Database,
-    title: 'Data Recovery',
+    title: 'Data Recovery Service',
     description: 'Professional data retrieval services to recover critical business information from damaged or corrupted drives.'
   },
   {
     icon: Monitor,
-    title: 'Operating System Installation',
+    title: 'OS Installation & Virus Removal',
     description: 'Clean installation, upgrades, and configuration of Windows, Linux, and other operating systems.'
   },
   {
     icon: Wifi,
-    title: 'Wi-Fi & Network Setup',
+    title: 'Wireless Networking Setup',
     description: 'Enterprise-grade wireless network deployments and structured cabling for reliable connectivity.'
   },
   {
     icon: Cpu,
-    title: 'Hardware Installation',
+    title: 'Hardware & Software Installation',
     description: 'Seamless integration of new components and networking devices into your existing IT environment.'
   },
   {
     icon: FileText,
-    title: 'Billing Software Solutions',
+    title: 'Billing & Accounting Software',
     description: 'Setup and configuration of reliable billing and point-of-sale software tailored to your business needs.'
   },
   {
     icon: Wrench,
-    title: 'On-site Technical Support',
+    title: 'Onsite Engineer Service',
     description: 'Responsive, in-person assistance for troubleshooting hardware and network issues directly at your location.'
   }
 ];

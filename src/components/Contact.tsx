@@ -70,11 +70,11 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-lg mb-1">Registered Office</h3>
                   <p className="text-slate-600 leading-relaxed mb-3">
-                    D.19, Industrial Estate Labour Colony<br />
-                    Guindy, Chennai - 32
+                    Udayarpalayam,<br />
+                    Ariyalur District, Tamil Nadu
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=D.19+Industrial+Estate+Labour+Colony+Guindy+Chennai" 
+                    href="https://maps.google.com/?q=Udayarpalayam+Ariyalur+District" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors bg-blue-50 px-3 py-1.5 rounded-md"
@@ -103,9 +103,12 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 text-lg mb-1">Phone</h3>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-2">
                     <a href="tel:+914422502344" className="text-slate-600 hover:text-blue-600 transition-colors">+91 44 22502344</a>
                     <a href="tel:+918122850150" className="text-slate-600 hover:text-blue-600 transition-colors">+91 8122850150</a>
+                    <a href="https://wa.me/918122850150" target="_blank" rel="noreferrer" className="text-green-600 font-medium hover:text-green-700 transition-colors flex items-center gap-1">
+                      Message on WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>
@@ -126,8 +129,8 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="pt-6 border-t border-slate-200">
-              <div className="text-sm text-slate-500 font-medium uppercase tracking-wider mb-1">GST Registration</div>
-              <div className="text-slate-900 font-mono font-medium">33CNPPA4747J1ZT</div>
+              <div className="text-sm text-slate-500 font-medium uppercase tracking-wider mb-1">Book Onsite Engineer</div>
+              <div className="text-slate-900 font-medium">Available across all of Ariyalur District</div>
             </div>
           </motion.div>
           
@@ -254,12 +257,12 @@ const Contact: React.FC = () => {
               Our Location
             </h2>
             <p className="text-lg text-slate-600">
-              Visit us at our registered office in Guindy, Chennai.
+              Visit us at our office in Udayarpalayam, Ariyalur District.
             </p>
           </div>
           <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3a526732a394a5e1%3A0x1d36d80d287bc1a2!2sGuindy%20Industrial%20Estate%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3ba5576a8ef1bf53%3A0xb35a0ce8c1303254!2sUdayarpalayam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
