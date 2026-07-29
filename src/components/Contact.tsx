@@ -262,7 +262,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3ba5576a8ef1bf53%3A0xb35a0ce8c1303254!2sUdayarpalayam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=Kottai+vasal+Keelvithi,+Udayarpalayam,+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
