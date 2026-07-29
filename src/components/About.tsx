@@ -52,14 +52,6 @@ const About: React.FC = () => {
                 alt="Megatron Tech Solutions - Premium IT Products, Laptops and CCTV" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              
-              {/* Overlay label */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-lg border border-white transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <h3 className="font-bold font-display text-slate-900 mb-1 text-lg">Premium IT Infrastructure</h3>
-                  <p className="text-sm text-slate-600">Enterprise-grade Laptops & Advanced Surveillance Systems</p>
-                </div>
-              </div>
             </div>
           </motion.div>
           
