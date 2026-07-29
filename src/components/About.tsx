@@ -34,75 +34,34 @@ const About: React.FC = () => {
             </div>
           </motion.div>
           
-          {/* Innovative Product Visual */}
-          <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end mt-12 lg:mt-0">
-            {/* Background elements */}
+          {/* Product Advertisement Visual */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative mt-12 lg:mt-0 flex justify-center lg:justify-end"
+          >
+            {/* Decorative background blurs */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-cyan-400/20 rounded-full blur-3xl"></div>
-
-            {/* Central Product Showcase Grid */}
-            <div className="relative w-full max-w-[400px] aspect-square">
-              {/* Center Main Card - Laptop/Desktop */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                whileHover={{ y: -5 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52 h-52 bg-white rounded-3xl shadow-xl border border-slate-100 flex flex-col items-center justify-center p-6 z-20 cursor-pointer"
-              >
-                <div className="w-20 h-20 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                  <Laptop className="w-10 h-10" />
+            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-400/20 rounded-full blur-3xl"></div>
+            
+            <div className="relative w-full max-w-lg aspect-square lg:aspect-auto lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+              <img 
+                src="/about-products.png" 
+                alt="Megatron Tech Solutions - Premium IT Products, Laptops and CCTV" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              
+              {/* Overlay label */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-lg border border-white transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <h3 className="font-bold font-display text-slate-900 mb-1 text-lg">Premium IT Infrastructure</h3>
+                  <p className="text-sm text-slate-600">Enterprise-grade Laptops & Advanced Surveillance Systems</p>
                 </div>
-                <span className="font-bold text-slate-800 text-center text-base font-display">Laptops & Desktops</span>
-              </motion.div>
-
-              {/* Top Right Card - CCTV */}
-              <motion.div 
-                initial={{ opacity: 0, x: 20, y: -20 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                whileHover={{ y: -5 }}
-                className="absolute -top-4 right-0 md:-right-8 w-44 h-44 bg-slate-900 rounded-3xl shadow-2xl border border-slate-700 flex flex-col items-center justify-center p-5 z-10 cursor-pointer"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-slate-800 text-cyan-400 flex items-center justify-center mb-3">
-                  <Camera className="w-7 h-7" />
-                </div>
-                <span className="font-semibold text-white text-center text-sm font-display">CCTV Surveillance</span>
-              </motion.div>
-
-              {/* Bottom Left Card - Printers */}
-              <motion.div 
-                initial={{ opacity: 0, x: -20, y: 20 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                whileHover={{ y: -5 }}
-                className="absolute -bottom-4 left-0 md:-left-8 w-40 h-40 bg-blue-600 rounded-3xl shadow-lg border border-blue-500 flex flex-col items-center justify-center p-4 z-30 cursor-pointer"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-blue-500 text-white flex items-center justify-center mb-3">
-                  <Printer className="w-6 h-6" />
-                </div>
-                <span className="font-medium text-white text-center text-sm font-display">Printers & Copiers</span>
-              </motion.div>
-
-              {/* Bottom Right Card - Security/Antivirus */}
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                whileHover={{ y: -5 }}
-                className="absolute bottom-6 -right-4 md:-right-12 w-32 h-32 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center justify-center p-3 z-0 cursor-pointer"
-              >
-                <div className="w-10 h-10 rounded-full bg-red-50 text-red-500 flex items-center justify-center mb-2">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-                <span className="font-medium text-slate-700 text-center text-[11px] leading-tight">Cybersecurity Solutions</span>
-              </motion.div>
+              </div>
             </div>
-          </div>
+          </motion.div>
           
         </div>
       </div>
