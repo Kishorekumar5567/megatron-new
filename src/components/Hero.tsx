@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             >
               Your Trusted <br className="hidden sm:block" />
               IT Partner in <br className="hidden sm:block" />
-              <span className="text-cyan-200">Ariyalur.</span>
+              <span className="text-cyan-200">Ariyalur District.</span>
             </motion.h1>
             
             <motion.p 
