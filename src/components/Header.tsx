@@ -39,8 +39,9 @@ const Header: React.FC = () => {
                 alt="Megatron Tech Solutions Logo" 
                 className="w-10 h-10 object-cover rounded-xl shadow-sm border border-slate-200/50"
               />
-              <span className="font-display font-bold text-xl tracking-tight text-slate-900">
-                Megatron Tech Solutions
+              <span className="font-display font-bold text-xl tracking-tight ml-1">
+                <span className={`transition-colors duration-300 ${isScrolled ? 'text-slate-900' : 'text-white'}`}>Megatron </span>
+                <span className={`transition-colors duration-300 ${isScrolled ? 'text-blue-600' : 'text-cyan-400'}`}>Tech Solutions</span>
               </span>
             </a>
           </div>
@@ -51,7 +52,11 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled 
+                    ? 'text-slate-600 hover:text-blue-600' 
+                    : 'text-slate-300 hover:text-cyan-300'
+                }`}
               >
                 {link.name}
               </a>
@@ -68,7 +73,9 @@ const Header: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-md text-slate-600 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600"
+              className={`p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 transition-colors ${
+                isScrolled ? 'text-slate-600 hover:text-slate-900' : 'text-slate-300 hover:text-white'
+              }`}
               aria-expanded={isMobileMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
