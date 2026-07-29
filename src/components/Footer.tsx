@@ -11,9 +11,11 @@ const Footer: React.FC = () => {
           
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold text-xl leading-none">M</span>
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Megatron Tech Solutions Logo" 
+                className="w-10 h-10 object-cover rounded-xl shadow-sm border border-slate-700/50 bg-white"
+              />
               <span className="font-display font-bold text-xl tracking-tight text-white">
                 Megatron Tech Solutions
               </span>
@@ -45,8 +47,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">Location</h4>
             <address className="not-italic text-sm text-slate-400 space-y-1">
+              <p>Kottai vasal Keelvithi,</p>
               <p>Udayarpalayam,</p>
-              <p>Ariyalur District</p>
+              <p>Tamil Nadu 621804</p>
               <p className="mt-4 pt-4 border-t border-slate-800">
                 Operating since <span className="text-slate-300 font-mono">2014</span>
               </p>

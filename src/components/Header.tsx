@@ -34,9 +34,11 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <a href="#" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold text-xl leading-none">M</span>
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Megatron Tech Solutions Logo" 
+                className="w-10 h-10 object-cover rounded-xl shadow-sm border border-slate-200/50"
+              />
               <span className="font-display font-bold text-xl tracking-tight text-slate-900">
                 Megatron Tech Solutions
               </span>

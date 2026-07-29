@@ -70,11 +70,11 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-lg mb-1">Registered Office</h3>
                   <p className="text-slate-600 leading-relaxed mb-3">
-                    Udayarpalayam,<br />
-                    Ariyalur District, Tamil Nadu
+                    Kottai vasal Keelvithi, Udayarpalayam<br />
+                    Tamil Nadu 621804
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=Udayarpalayam+Ariyalur+District" 
+                    href="https://maps.google.com/?q=57MV%2BXP+Udayarpalayam%2C+Tamil+Nadu" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors bg-blue-50 px-3 py-1.5 rounded-md"
@@ -257,7 +257,7 @@ const Contact: React.FC = () => {
               Our Location
             </h2>
             <p className="text-lg text-slate-600">
-              Visit us at our office in Udayarpalayam, Ariyalur District.
+              Visit us at our office in Kottai vasal Keelvithi, Udayarpalayam.
             </p>
           </div>
           <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-200">
