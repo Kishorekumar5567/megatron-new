@@ -48,7 +48,7 @@ const About: React.FC = () => {
             
             <div className="relative w-full max-w-lg aspect-square lg:aspect-auto lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
               <img 
-                src="/about-products.png" 
+                src="/about.png" 
                 alt="Megatron Tech Solutions - Premium IT Products, Laptops and CCTV" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
