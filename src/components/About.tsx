@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Network } from 'lucide-react';
+import { Network, Laptop, Camera, ShieldCheck, Printer } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -34,46 +34,75 @@ const About: React.FC = () => {
             </div>
           </motion.div>
           
-          {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="aspect-[4/3] rounded-2xl bg-slate-900 relative overflow-hidden flex items-center justify-center p-8 border border-slate-800 shadow-2xl">
-              {/* Abstract network visual */}
-              <div className="absolute inset-0 opacity-20 grid-pattern"></div>
-              
-              <div className="relative w-full h-full border border-slate-700/50 rounded-xl bg-slate-800/50 backdrop-blur-sm flex flex-col justify-between p-6">
-                <div className="flex justify-between items-start">
-                  <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
-                    <div className="w-6 h-6 rounded-sm bg-blue-400"></div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-slate-600"></div>
-                    <div className="w-3 h-3 rounded-full bg-slate-600"></div>
-                    <div className="w-3 h-3 rounded-full bg-slate-600"></div>
-                  </div>
+          {/* Innovative Product Visual */}
+          <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end mt-12 lg:mt-0">
+            {/* Background elements */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-cyan-400/20 rounded-full blur-3xl"></div>
+
+            {/* Central Product Showcase Grid */}
+            <div className="relative w-full max-w-[400px] aspect-square">
+              {/* Center Main Card - Laptop/Desktop */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                whileHover={{ y: -5 }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52 h-52 bg-white rounded-3xl shadow-xl border border-slate-100 flex flex-col items-center justify-center p-6 z-20 cursor-pointer"
+              >
+                <div className="w-20 h-20 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                  <Laptop className="w-10 h-10" />
                 </div>
-                
-                <div className="space-y-4">
-                  <div className="h-2 w-3/4 bg-slate-700 rounded"></div>
-                  <div className="h-2 w-1/2 bg-slate-700 rounded"></div>
-                  <div className="h-2 w-5/6 bg-slate-700 rounded"></div>
+                <span className="font-bold text-slate-800 text-center text-base font-display">Laptops & Desktops</span>
+              </motion.div>
+
+              {/* Top Right Card - CCTV */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20, y: -20 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover={{ y: -5 }}
+                className="absolute -top-4 right-0 md:-right-8 w-44 h-44 bg-slate-900 rounded-3xl shadow-2xl border border-slate-700 flex flex-col items-center justify-center p-5 z-10 cursor-pointer"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-slate-800 text-cyan-400 flex items-center justify-center mb-3">
+                  <Camera className="w-7 h-7" />
                 </div>
-                
-                <div className="flex gap-4">
-                  <div className="h-8 w-24 bg-blue-600/40 rounded border border-blue-500/30"></div>
-                  <div className="h-8 w-24 bg-slate-700/50 rounded border border-slate-600/50"></div>
+                <span className="font-semibold text-white text-center text-sm font-display">CCTV Surveillance</span>
+              </motion.div>
+
+              {/* Bottom Left Card - Printers */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20, y: 20 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                whileHover={{ y: -5 }}
+                className="absolute -bottom-4 left-0 md:-left-8 w-40 h-40 bg-blue-600 rounded-3xl shadow-lg border border-blue-500 flex flex-col items-center justify-center p-4 z-30 cursor-pointer"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-blue-500 text-white flex items-center justify-center mb-3">
+                  <Printer className="w-6 h-6" />
                 </div>
-              </div>
-              
-              <div className="absolute top-1/2 -right-6 w-12 h-12 bg-cyan-500/20 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-6 left-1/4 w-16 h-16 bg-blue-500/20 rounded-full blur-xl"></div>
+                <span className="font-medium text-white text-center text-sm font-display">Printers & Copiers</span>
+              </motion.div>
+
+              {/* Bottom Right Card - Security/Antivirus */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                whileHover={{ y: -5 }}
+                className="absolute bottom-6 -right-4 md:-right-12 w-32 h-32 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center justify-center p-3 z-0 cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-full bg-red-50 text-red-500 flex items-center justify-center mb-2">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <span className="font-medium text-slate-700 text-center text-[11px] leading-tight">Cybersecurity Solutions</span>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
           
         </div>
       </div>
