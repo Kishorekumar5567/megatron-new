@@ -46,11 +46,11 @@ const About: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"></div>
             <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-400/20 rounded-full blur-3xl"></div>
             
-            <div className="relative w-full max-w-lg aspect-square lg:aspect-auto lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+            <div className="relative w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
               <img 
                 src="/about.png" 
                 alt="Megatron Tech Solutions - Premium IT Products, Laptops and CCTV" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
               />
             </div>
           </motion.div>
