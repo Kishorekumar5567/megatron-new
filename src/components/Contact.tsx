@@ -104,9 +104,9 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-lg mb-1">Phone</h3>
                   <div className="flex flex-col gap-2">
-                    <a href="tel:+914422502344" className="text-slate-600 hover:text-blue-600 transition-colors">+91 44 22502344</a>
-                    <a href="tel:+918122850150" className="text-slate-600 hover:text-blue-600 transition-colors">+91 8122850150</a>
-                    <a href="https://wa.me/918122850150" target="_blank" rel="noreferrer" className="text-green-600 font-medium hover:text-green-700 transition-colors flex items-center gap-1">
+                    <a href="tel:+916383187434" className="text-slate-600 hover:text-blue-600 transition-colors">+91 6383187434 (Official)</a>
+                    <a href="tel:+918012377518" className="text-slate-600 hover:text-blue-600 transition-colors">+91 8012377518</a>
+                    <a href="https://wa.me/916383187434" target="_blank" rel="noreferrer" className="text-green-600 font-medium hover:text-green-700 transition-colors flex items-center gap-1">
                       Message on WhatsApp
                     </a>
                   </div>

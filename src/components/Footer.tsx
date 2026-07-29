@@ -39,8 +39,8 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-6">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="mailto:info@megatrontechsolution.com" className="hover:text-blue-400 transition-colors">info@megatrontechsolution.com</a></li>
-              <li><a href="tel:+914422502344" className="hover:text-blue-400 transition-colors">+91 44 22502344</a></li>
-              <li><a href="tel:+918122850150" className="hover:text-blue-400 transition-colors">+91 8122850150</a></li>
+              <li><a href="tel:+916383187434" className="hover:text-blue-400 transition-colors">+91 6383187434 (Official)</a></li>
+              <li><a href="tel:+918012377518" className="hover:text-blue-400 transition-colors">+91 8012377518</a></li>
             </ul>
           </div>
           
