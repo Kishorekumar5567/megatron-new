@@ -95,10 +95,10 @@ const Services: React.FC = () => {
               <div className="w-12 h-12 rounded-lg bg-blue-900/50 text-blue-400 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                 <service.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold font-display mb-3">
+              <h3 className="text-lg font-bold font-display mb-3 text-white">
                 {service.title}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
+              <p className="text-slate-300 text-sm leading-relaxed group-hover:text-white transition-colors">
                 {service.description}
               </p>
             </motion.div>
