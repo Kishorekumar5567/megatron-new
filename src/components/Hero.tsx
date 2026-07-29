@@ -114,66 +114,58 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Visual Illustration */}
+          {/* Visual Illustration - Product Showcase */}
           <div className="lg:col-span-5 relative hidden md:block mt-12 lg:mt-0">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full h-[450px]"
+              transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.4 }}
+              className="relative w-full h-[500px] flex items-center justify-center"
             >
               
-              {/* Network Status Card */}
-              <motion.div 
+              {/* Glowing orb behind image */}
+              <div className="absolute inset-0 bg-cyan-500/20 rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '4s' }} />
+              
+              {/* Main Product Image */}
+              <motion.img 
                 variants={floatingVars}
                 initial="initial"
                 animate="animate"
-                className="absolute right-0 top-10 w-[420px] bg-[#112a46]/90 backdrop-blur-md rounded-2xl border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] p-6"
+                src="/hero-products.png" 
+                alt="Megatron IT Products & CCTV"
+                className="relative z-10 w-full max-w-[480px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              />
+
+              {/* CCTV Highlight Badge */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="absolute top-16 -right-4 bg-[#072445]/80 backdrop-blur-md border border-cyan-500/30 shadow-[0_10px_30px_rgba(0,0,0,0.5)] p-4 rounded-2xl z-20 flex items-center gap-4"
               >
-                <div className="flex justify-between items-center mb-10">
-                  <span className="text-[10px] font-bold tracking-widest text-white/70 uppercase">NETWORK STATUS</span>
-                  <div className="flex items-center gap-1.5">
-                    <Circle className="w-2 h-2 text-emerald-400 fill-emerald-400" />
-                    <span className="text-[10px] font-semibold text-white/80">All systems stable</span>
-                  </div>
+                <div className="relative w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-cyan-400 animate-ping absolute" />
+                  <div className="w-3 h-3 rounded-full bg-cyan-400 relative z-10" />
                 </div>
-                
-                {/* Bar Chart */}
-                <div className="flex items-end justify-between h-32 gap-1.5 mb-6">
-                  {barHeights.map((height, i) => (
-                    <div key={i} className="w-full bg-[#1c497a]/40 rounded-t-sm relative group overflow-hidden" style={{ height: '100%' }}>
-                      <motion.div 
-                        initial={{ height: 0 }}
-                        animate={{ height: `${height}%` }}
-                        transition={{ duration: 1, delay: 0.5 + (i * 0.05) }}
-                        className="absolute bottom-0 left-0 w-full bg-cyan-400 rounded-t-sm"
-                      />
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="flex justify-between items-center pt-4 border-t border-white/5">
-                  <span className="text-[10px] text-white/40">Last 72 hours</span>
-                  <span className="text-[10px] font-bold text-emerald-400 tracking-wider">99.99% uptime</span>
+                <div>
+                  <p className="text-[10px] text-cyan-300 font-semibold uppercase tracking-wider">Smart Security</p>
+                  <p className="text-white font-bold text-sm">CCTV Solutions</p>
                 </div>
               </motion.div>
 
-              {/* Support Card overlapping */}
-              <motion.div
-                variants={floatingVars}
-                initial="initial"
-                animate="animate"
-                style={{ animationDelay: '1.5s' }}
-                className="absolute -left-4 bottom-24 bg-[#0f2c4b]/95 backdrop-blur-md border border-white/5 rounded-2xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex items-center gap-5 w-[280px]"
+              {/* Laptop Highlight Badge */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                className="absolute bottom-20 -left-6 bg-[#072445]/80 backdrop-blur-md border border-blue-500/30 shadow-[0_10px_30px_rgba(0,0,0,0.5)] p-4 rounded-2xl z-20 flex items-center gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-cyan-400 flex items-center justify-center flex-shrink-0 shadow-inner">
-                  <Headset className="w-6 h-6 text-[#072445]" />
+                <div className="w-10 h-10 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-400">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-white mb-0.5">24×7</div>
-                  <div className="text-[11px] text-white/60 leading-snug">
-                    support when you <br/> need it
-                  </div>
+                  <p className="text-[10px] text-blue-300 font-semibold uppercase tracking-wider">Premium IT</p>
+                  <p className="text-white font-bold text-sm">Laptops & Desktops</p>
                 </div>
               </motion.div>
 
