@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                     Tamil Nadu 621804
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=57MV%2BXP+Udayarpalayam%2C+Tamil+Nadu" 
+                    href="https://maps.app.goo.gl/Degqs1okdnfvXh156" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors bg-blue-50 px-3 py-1.5 rounded-md"
