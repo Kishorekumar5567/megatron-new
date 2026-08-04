@@ -18,26 +18,53 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
     
-    // Simulate network request
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: ''
+    try {
+      const response = await fetch('http://localhost:5001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: ''
+        });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setStatus('idle');
+        }, 5000);
+      } else {
+        console.error('Server error:', data.error);
+        setStatus('error');
+        
+        // Reset error message after 5 seconds
+        setTimeout(() => {
+          setStatus('idle');
+        }, 5000);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      setStatus('error');
       
-      // Reset success message after 5 seconds
+      // Reset error message after 5 seconds
       setTimeout(() => {
         setStatus('idle');
       }, 5000);
-    }, 1500);
+    }
   };
 
   return (
@@ -243,6 +270,20 @@ const Contact: React.FC = () => {
                     </div>
                   </motion.div>
                 )}
+
+                {status === 'error' && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3"
+                  >
+                    <div className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5 flex items-center justify-center font-bold">!</div>
+                    <div>
+                      <h4 className="text-red-800 font-medium">Failed to send message</h4>
+                      <p className="text-red-700 text-sm mt-1">There was an error sending your message. Please try again later or contact us directly via email.</p>
+                    </div>
+                  </motion.div>
+                )}
                 
               </form>
             </div>
@@ -262,7 +303,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-200">
             <iframe
-              src="https://maps.google.com/maps?q=11.1849619,79.2943338&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Megatron+Tech+Solutions,+Udayarpalayam&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
