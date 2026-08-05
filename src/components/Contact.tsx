@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Phone, ExternalLink, Loader2, CheckCircle2, Clock } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,41 +24,41 @@ const Contact: React.FC = () => {
     setStatus('submitting');
     
     try {
-      const response = await fetch('https://megatron-backend-i59w.onrender.com/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Replace these with your actual EmailJS credentials
+      const SERVICE_ID = 'service_ggpnfyr';
+      const TEMPLATE_ID = 'template_atzx2ib';
+      const PUBLIC_KEY = 'xHgDTH7EuJy6PPqr_';
+
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company || 'N/A',
+        message: formData.message,
+      };
+
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        PUBLIC_KEY
+      );
+
+      setStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: ''
       });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          message: ''
-        });
-        
-        // Reset success message after 5 seconds
-        setTimeout(() => {
-          setStatus('idle');
-        }, 5000);
-      } else {
-        console.error('Server error:', data.error);
-        setStatus('error');
-        
-        // Reset error message after 5 seconds
-        setTimeout(() => {
-          setStatus('idle');
-        }, 5000);
-      }
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setStatus('idle');
+      }, 5000);
     } catch (error) {
-      console.error('Network error:', error);
+      console.error('EmailJS error:', error);
       setStatus('error');
       
       // Reset error message after 5 seconds
