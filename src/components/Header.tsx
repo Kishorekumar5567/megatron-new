@@ -105,7 +105,20 @@ const Header: React.FC = () => {
                   key={link.name}
                   href={link.href}
                   className="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    if (link.href.startsWith('#')) {
+                      e.preventDefault();
+                      setIsMobileMenuOpen(false);
+                      if (link.href === '#') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      } else {
+                        const el = document.querySelector(link.href);
+                        if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 10);
+                      }
+                    } else {
+                      setIsMobileMenuOpen(false);
+                    }
+                  }}
                 >
                   {link.name}
                 </a>
@@ -113,7 +126,12 @@ const Header: React.FC = () => {
               <a
                 href="#contact"
                 className="block w-full text-center mt-4 px-5 py-3 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const el = document.querySelector('#contact');
+                  if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 10);
+                }}
               >
                 Start a conversation
               </a>
