@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
     setStatus('submitting');
     
     try {
-      const response = await fetch('http://localhost:5001/api/contact', {
+      const response = await fetch('https://megatron-backend-1.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
